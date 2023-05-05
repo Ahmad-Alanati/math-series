@@ -20,3 +20,8 @@ def test_fibonacci_four():
     actual = fibonacci(7)
     expected = 13
     assert actual == expected
+
+def test_fibonacci_five():
+    actual = fibonacci(50)
+    expected = 12586269025
+    assert actual == expected
