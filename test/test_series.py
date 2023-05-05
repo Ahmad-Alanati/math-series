@@ -86,3 +86,41 @@ def test_lucas_seven():
     respons = "there is no lucas number for this {} {}"
     expected = respons.format(type(n),n)
     assert actual == expected
+
+# sum_series tests
+
+def test_sum_series_one():
+    actual = sum_series(5)
+    expected = 5
+    sum_series_list_delete()
+    assert actual == expected
+
+def test_sum_series_two():
+    actual = sum_series(5,5)
+    expected = 20
+    sum_series_list_delete()
+    assert actual == expected
+
+def test_sum_series_three():
+    actual = sum_series(5,5,5)
+    sum_series_list_delete()
+    expected = 40
+    assert actual == expected
+
+def test_sum_series_four():
+    actual = sum_series("5",5,5)
+    sum_series_list_delete()
+    expected = "one of the pram isn't an int"
+    assert actual == expected
+
+def test_sum_series_five():
+    actual = sum_series(2,2,1)
+    sum_series_list_delete()
+    expected = 3
+    assert actual == expected
+
+def test_sum_series_six():
+    actual = sum_series(3,0,-1)
+    sum_series_list_delete()
+    expected = -2
+    assert actual == expected
