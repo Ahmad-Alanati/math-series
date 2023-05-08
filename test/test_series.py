@@ -1,8 +1,8 @@
 import pytest
-from series import fibonacci
-from series import lucas
-from series import sum_series
-from series import sum_series_list_delete
+from series.series import fibonacci
+from series.series import lucas
+from series.series import sum_series
+from series.series import sum_series_list_delete
 
 
 # fibonacci tests
