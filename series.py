@@ -1,7 +1,11 @@
 fibonacci_list = [0,1]
-
+lucas_list = [2,1]
+sum_series_list =[]
 
 def fibonacci(n):
+    if not isinstance(n,int) or n<0:
+        respons = "there is no fibonacci number for this {} {}"
+        return respons.format(type(n),n)
     if n in range(len(fibonacci_list)):
         return fibonacci_list[n]
     else:
@@ -9,7 +13,12 @@ def fibonacci(n):
         return fibonacci_list[n]
 
 def lucas(n):
-    return 2
+    if not isinstance(n,int) or n<0:
+        respons = "there is no lucas number for this {} {}"
+        return respons.format(type(n),n)
+    if n in range(len(lucas_list)):
+        return lucas_list[n]
+    else:
+        lucas_list.append(lucas(n-1)+lucas(n-2))
+        return lucas_list[n]
 
-def sum_series(n,first_element=0,second_element=1):
-    return n
